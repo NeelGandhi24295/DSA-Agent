@@ -1,0 +1,44 @@
+def demo_data_types():
+    # Integer
+    a = 42
+    print(f"Integer: {a}")
+
+    # Float
+    b = 3.14159
+    print(f"Float: {b}")
+
+    # String
+    c = "Hello, World!"
+    print(f"String: {c}")
+
+    # Boolean
+    d = True
+    print(f"Boolean: {d}")
+
+    # List
+    e = [1, 2, 3, 'four', 'five']
+    print(f"List: {e}")
+
+    # Tuple
+    f = (1, 2, 3, 'four', 'five')
+    print(f"Tuple: {f}")
+
+    # Dictionary
+    g = {'name': 'Alice', 'age': 25}
+    print(f"Dictionary: {g}")
+
+    # Set
+    h = {1, 2, 3, 4, 5}
+    print(f"Set: {h}")
+
+    # NoneType
+    i = None
+    print(f"NoneType: {i}")
+
+    # Complex number
+    j = 2 + 3j
+    print(f"Complex: {j}")
+
+demo_data_types()
+
+# Test cases are incorporated in this example itself to demonstrate each type's basic usage

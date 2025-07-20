@@ -1,0 +1,46 @@
+class Stack:
+    def __init__(self):
+        self.stack = []
+
+    def isEmpty(self):
+        return len(self.stack) == 0
+
+    def push(self, item):
+        self.stack.append(item)
+        
+    def pop(self):
+        if not self.isEmpty():
+            return self.stack.pop()
+        else:
+            return "Stack is empty!"
+
+    def peek(self):
+        if not self.isEmpty():
+            return self.stack[-1]
+        else:
+            return "Stack is empty!"
+
+    def size(self):
+        return len(self.stack)
+        
+    def __str__(self):
+        return "Stack contains: " + " -> ".join(map(str, self.stack))
+        
+# Test Cases
+
+stack = Stack()
+
+# Test Case 1: Test push operation and print stack
+stack.push(5)
+stack.push(10)
+stack.push(15)
+print(stack)  # Expected output: Stack contains: 5 -> 10 -> 15
+
+# Test Case 2: Test peek operation
+top_element = stack.peek()
+print(f"Top element is: {top_element}")  # Expected output: Top element is: 15
+
+# Test Case 3: Test pop operation and print stack
+removed_element = stack.pop()
+print(f"Removed element is: {removed_element}")  # Expected output: Removed element is: 15
+print(stack)  # Expected output: Stack contains: 5 -> 10

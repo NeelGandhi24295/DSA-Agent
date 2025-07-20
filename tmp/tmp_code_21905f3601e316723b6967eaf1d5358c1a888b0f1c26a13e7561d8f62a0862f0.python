@@ -1,0 +1,17 @@
+def find_maximum(arr):
+    if not arr:
+        return None
+    max_elem = arr[0]
+    for num in arr:
+        if num > max_elem:
+            max_elem = num
+    return max_elem
+
+# Test cases
+test_case_1 = [3, 1, 4, 1, 5, 9]
+test_case_2 = [-5, -1, -6, -2]
+test_case_3 = [7]
+
+print("Maximum of test_case_1:", find_maximum(test_case_1))  # Expected: 9
+print("Maximum of test_case_2:", find_maximum(test_case_2))  # Expected: -1
+print("Maximum of test_case_3:", find_maximum(test_case_3))  # Expected: 7

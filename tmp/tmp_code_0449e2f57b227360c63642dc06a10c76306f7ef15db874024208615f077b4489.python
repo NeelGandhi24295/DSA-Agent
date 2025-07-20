@@ -1,0 +1,42 @@
+class Stack:
+    def __init__(self):
+        self.stack = []
+
+    def isEmpty(self):
+        return len(self.stack) == 0
+
+    def push(self, item):
+        self.stack.append(item)
+        print(f"Pushed {item} to stack")
+
+    def pop(self):
+        if self.isEmpty():
+            return "Stack is empty"
+        return self.stack.pop()
+
+    def peek(self):
+        if self.isEmpty():
+            return "Stack is empty"
+        return self.stack[-1]
+
+    def size(self):
+        return len(self.stack)
+
+# Test cases
+stack = Stack()
+
+# Test case 1: Push elements onto the stack
+stack.push(1)
+stack.push(2)
+stack.push(3)
+
+# Test case 2: Peek the top element of the stack
+print("Top element is:", stack.peek())
+
+# Test case 3: Pop elements from the stack
+print("Popped element:", stack.pop())
+print("Popped element:", stack.pop())
+print("Popped element:", stack.pop())
+
+# Test case 4: Try to pop from an empty stack
+print("Popped element:", stack.pop())

@@ -1,0 +1,15 @@
+def find_substring(s, start, end):
+    return s[start:end]
+
+# Test cases
+string1 = "Hello, world!"
+substring1 = find_substring(string1, 0, 5)  # Expected output: 'Hello'
+print(f"Test 1 - Substring of '{string1}' from index 0 to 5: '{substring1}'")
+
+string2 = "Data Structures and Algorithms"
+substring2 = find_substring(string2, 5, 15)  # Expected output: 'Structures'
+print(f"Test 2 - Substring of '{string2}' from index 5 to 15: '{substring2}'")
+
+string3 = "Python Programming"
+substring3 = find_substring(string3, 7, 18)  # Expected output: 'Programming'
+print(f"Test 3 - Substring of '{string3}' from index 7 to 18: '{substring3}'")

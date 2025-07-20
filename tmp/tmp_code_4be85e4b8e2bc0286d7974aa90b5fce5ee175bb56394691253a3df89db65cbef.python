@@ -1,0 +1,15 @@
+def check_substring(main_string, sub_string):
+    # Check if sub_string is in main_string
+    return sub_string in main_string
+
+# Test cases
+test_cases = [
+    ("hello world", "world"),
+    ("data science", "at"),
+    ("python programming", "java"),
+]
+
+# Print results for each test case
+for main_str, sub_str in test_cases:
+    result = check_substring(main_str, sub_str)
+    print(f"Is '{sub_str}' in '{main_str}'? {result}")

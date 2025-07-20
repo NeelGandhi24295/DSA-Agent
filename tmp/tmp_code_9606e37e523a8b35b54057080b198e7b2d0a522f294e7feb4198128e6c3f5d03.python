@@ -1,0 +1,19 @@
+def find_substrings(string, current=""):
+    if not string:
+        return [current]
+    
+    # Continue by adding the first character or not
+    include_char = find_substrings(string[1:], current + string[0])
+    exclude_char = find_substrings(string[1:], current)
+    
+    return include_char + exclude_char
+
+# Testing the function with test cases
+test_string_1 = "abc"
+test_string_2 = "abcd"
+test_string_3 = "a"
+
+# Display the results
+print("Substrings of 'abc':", find_substrings(test_string_1))
+print("Substrings of 'abcd':", find_substrings(test_string_2))
+print("Substrings of 'a':", find_substrings(test_string_3))

@@ -1,0 +1,23 @@
+code = """
+def check_vowels(input_string):
+    vowels = set('aeiouAEIOU')
+    found_vowels = []
+
+    for char in input_string:
+        if char in vowels:
+            found_vowels.append(char)
+
+    return found_vowels
+
+# Test cases
+test_string1 = "Hello World"
+test_string2 = "Python Programming"
+test_string3 = "Vowels In String"
+
+print("Vowels in '{}': {}".format(test_string1, check_vowels(test_string1)))
+print("Vowels in '{}': {}".format(test_string2, check_vowels(test_string2)))
+print("Vowels in '{}': {}".format(test_string3, check_vowels(test_string3)))
+"""
+
+with open("solutions.py", "w") as f:
+    f.write(code)

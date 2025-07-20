@@ -1,0 +1,21 @@
+def is_palindrome(s):
+    # Normalize the string by removing spaces and converting to lowercase
+    s = ''.join(e for e in s if e.isalnum()).lower()
+    # Compare the string with its reverse
+    return s == s[::-1]
+
+# Test function to demonstrate differences
+def test_palindrome_differences():
+    # Palindrome example
+    palindrome_string = "madam"
+    non_palindrome_string = "python"
+
+    # Check if the strings are palindromes
+    palindrome_result = is_palindrome(palindrome_string)
+    non_palindrome_result = is_palindrome(non_palindrome_string)
+
+    print(f'Is "{palindrome_string}" a palindrome? {palindrome_result}') # Expected: True
+    print(f'Is "{non_palindrome_string}" a palindrome? {non_palindrome_result}') # Expected: False
+
+# Execute test function
+test_palindrome_differences()

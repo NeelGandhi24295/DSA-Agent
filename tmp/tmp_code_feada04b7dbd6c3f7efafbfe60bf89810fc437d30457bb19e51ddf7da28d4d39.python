@@ -1,0 +1,22 @@
+def demonstrate_strings():
+    # Single-line string using double quotes
+    string1 = "Hello, World!"
+    
+    # Single-line string using single quotes
+    string2 = 'Sample Text'
+    
+    # Multi-line string using triple quotes
+    string3 = """This is a string
+    that spans multiple lines."""
+    
+    # String with special characters
+    string4 = "This string contains special characters:\nNew line, \tTab, etc."
+
+    # Displaying strings
+    print("Single-line String 1:", string1)
+    print("Single-line String 2:", string2)
+    print("Multi-line String:", string3)
+    print("String with Special Characters:", string4)
+
+# Calling the function
+demonstrate_strings()

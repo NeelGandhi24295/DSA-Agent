@@ -1,0 +1,46 @@
+code = '''class Stack:
+    def __init__(self):
+        self.items = []
+
+    def is_empty(self):
+        return len(self.items) == 0
+
+    def push(self, item):
+        self.items.append(item)
+
+    def pop(self):
+        if not self.is_empty():
+            return self.items.pop()
+        else:
+            raise IndexError("pop from an empty stack")
+
+    def peek(self):
+        if not self.is_empty():
+            return self.items[-1]
+        else:
+            raise IndexError("peek from an empty stack")
+
+    def size(self):
+        return len(self.items)
+
+# Test cases
+stack = Stack()
+
+# Test case 1: Push elements and check the peek value
+stack.push(10)
+stack.push(20)
+stack.push(30)
+print("Top element after pushes:", stack.peek())  # Output: 30
+
+# Test case 2: Pop element and check the peek value
+stack.pop()
+print("Top element after one pop:", stack.peek())  # Output: 20
+
+# Test case 3: Pop remaining elements to empty the stack and check if empty
+stack.pop()
+stack.pop()
+print("Is stack empty after popping all elements?:", stack.is_empty())  # Output: True
+'''
+
+with open("solutions.py", "w") as f:
+    f.write(code)

@@ -1,0 +1,14 @@
+code = """def is_palindrome(s):
+    # Normalize the string by removing spaces and converting to lowercase
+    s = ''.join(e for e in s if e.isalnum()).lower()
+    # Compare the string with its reverse
+    return s == s[::-1]
+
+# Test cases
+print(is_palindrome("A man, a plan, a canal, Panama!"))  # Expected output: True
+print(is_palindrome("racecar"))  # Expected output: True
+print(is_palindrome("hello"))    # Expected output: False
+"""
+
+with open("solutions.py", "w") as f:
+    f.write(code)

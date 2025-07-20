@@ -1,0 +1,39 @@
+class Queue:
+    def __init__(self):
+        self.items = []
+
+    def is_empty(self):
+        # Return True if the queue is empty
+        return len(self.items) == 0
+
+    def enqueue(self, item):
+        # Add an item to the end of the queue
+        self.items.append(item)
+
+    def dequeue(self):
+        # Remove an item from the front of the queue
+        if not self.is_empty():
+            return self.items.pop(0)
+        return "Queue is empty."
+
+    def size(self):
+        # Return the number of items in the queue
+        return len(self.items)
+
+# Test cases
+queue = Queue()
+
+# Test case 1: Enqueue elements and check size
+queue.enqueue(10)
+queue.enqueue(20)
+queue.enqueue(30)
+print("Test 1 - Size after enqueue operations:", queue.size())  # Expected: 3
+
+# Test case 2: Dequeue elements and check results
+deq1 = queue.dequeue()
+deq2 = queue.dequeue()
+print(f"Test 2 - Dequeued elements: {deq1}, {deq2}")  # Expected: 10, 20
+
+# Test case 3: Check if queue is empty after dequeuing all elements
+queue.dequeue()  # Remove last element
+print("Test 3 - Is queue empty?", queue.is_empty())  # Expected: True

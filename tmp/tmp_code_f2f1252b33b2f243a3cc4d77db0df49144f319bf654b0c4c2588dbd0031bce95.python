@@ -1,0 +1,63 @@
+class ListNode:
+    def __init__(self, value=0, next=None):
+        self.value = value
+        self.next = next
+
+def reverse_linked_list(head: ListNode) -> ListNode:
+    prev = None
+    current = head
+    while current:
+        next = current.next
+        current.next = prev
+        prev = current
+        current = next
+    return prev
+
+# Helper function to print the linked list
+def print_linked_list(head: ListNode):
+    current = head
+    result = []
+    while current:
+        result.append(current.value)
+        current = current.next
+    print(result)
+
+# Test cases
+# Test case 1: List: 1 -> 2 -> 3 -> 4 -> 5
+node1 = ListNode(1)
+node2 = ListNode(2)
+node3 = ListNode(3)
+node4 = ListNode(4)
+node5 = ListNode(5)
+node1.next = node2
+node2.next = node3
+node3.next = node4
+node4.next = node5
+
+# Test case 2: List: 10 -> 20
+node6 = ListNode(10)
+node7 = ListNode(20)
+node6.next = node7
+
+# Test case 3: List: 7 (single element)
+node8 = ListNode(7)
+
+# Reversing different linked lists and printing
+print("Original List 1:")
+print_linked_list(node1)
+reversed_head1 = reverse_linked_list(node1)
+print("Reversed List 1:")
+print_linked_list(reversed_head1)
+
+print("Original List 2:")
+print_linked_list(node6)
+reversed_head2 = reverse_linked_list(node6)
+print("Reversed List 2:")
+print_linked_list(reversed_head2)
+
+print("Original List 3:")
+print_linked_list(node8)
+reversed_head3 = reverse_linked_list(node8)
+print("Reversed List 3:")
+print_linked_list(reversed_head3)
+

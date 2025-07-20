@@ -1,0 +1,54 @@
+code = """
+class Queue:
+    def __init__(self):
+        self.items = []
+
+    def is_empty(self):
+        return len(self.items) == 0
+
+    def enqueue(self, item):
+        self.items.append(item)
+
+    def dequeue(self):
+        if not self.is_empty():
+            return self.items.pop(0)
+        return None
+
+    def front(self):
+        if not self.is_empty():
+            return self.items[0]
+        return None
+
+    def size(self):
+        return len(self.items)
+
+    def __str__(self):
+        return str(self.items)
+
+
+# Test cases to demonstrate the queue functionality
+queue = Queue()
+
+# Enqueue elements
+queue.enqueue(1)
+queue.enqueue(2)
+queue.enqueue(3)
+
+# Display queue
+print("Queue after enqueuing 1, 2, 3:", queue)
+
+# Dequeue an element
+print("Dequeued element:", queue.dequeue())
+print("Queue after dequeuing:", queue)
+
+# Peek at the front element
+print("Front element is:", queue.front())
+
+# Size of the queue
+print("Size of the queue:", queue.size())
+
+# Check if queue is empty
+print("Is queue empty?", queue.is_empty())
+"""
+with open("solutions.py", "w") as f:
+    f.write(code)

@@ -1,0 +1,42 @@
+code = """
+class Stack:
+    def __init__(self):
+        self.elements = []
+
+    def is_empty(self):
+        return len(self.elements) == 0
+
+    def push(self, element):
+        self.elements.append(element)
+
+    def pop(self):
+        if not self.is_empty():
+            return self.elements.pop()
+        return None
+
+    def top(self):
+        if not self.is_empty():
+            return self.elements[-1]
+        return None
+
+    def __str__(self):
+        return f'Stack({self.elements})'
+
+# Let's test the Stack class
+stack = Stack()
+
+# Test case 1: Pushing elements onto the stack
+stack.push(1)
+stack.push(2)
+stack.push(3)
+print('After pushes:', stack)  # Should display Stack([1, 2, 3])
+
+# Test case 2: Popping elements from the stack
+print('Popped element:', stack.pop())  # Should return 3
+print('After pop:', stack)  # Should display Stack([1, 2])
+
+# Test case 3: Checking the top element
+print('Top element:', stack.top())  # Should return 2
+"""
+with open("solutions.py", "w") as f:
+    f.write(code)

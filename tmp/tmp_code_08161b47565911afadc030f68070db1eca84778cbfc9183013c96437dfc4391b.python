@@ -1,0 +1,20 @@
+code = """
+def get_substrings(s):
+    substrings = []
+    for i in range(len(s)):
+        for j in range(i+1, len(s)+1):
+            substrings.append(s[i:j])
+    return substrings
+
+# Test cases
+test_string_1 = "abc"
+test_string_2 = "dogs"
+test_string_3 = "xyz"
+
+print("Substrings of 'abc':", get_substrings(test_string_1))
+print("Substrings of 'dogs':", get_substrings(test_string_2))
+print("Substrings of 'xyz':", get_substrings(test_string_3))
+"""
+
+with open("solutions.py", "w") as f:
+    f.write(code)

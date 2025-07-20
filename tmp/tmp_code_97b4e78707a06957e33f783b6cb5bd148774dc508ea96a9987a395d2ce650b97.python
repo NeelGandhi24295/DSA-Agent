@@ -1,0 +1,48 @@
+class Stack:
+    def __init__(self):
+        self.items = []
+
+    def is_empty(self):
+        return len(self.items) == 0
+
+    def push(self, item):
+        self.items.append(item)
+
+    def pop(self):
+        if not self.is_empty():
+            return self.items.pop()
+        raise IndexError("pop from empty stack")
+
+    def peek(self):
+        if not self.is_empty():
+            return self.items[-1]
+        raise IndexError("peek from empty stack")
+
+    def size(self):
+        return len(self.items)
+
+# Test the stack implementation with some test cases
+if __name__ == "__main__":
+    s = Stack()
+    
+    # Test case 1: Attempt to pop from an empty stack
+    try:
+        print(s.pop())
+    except IndexError as e:
+        print(e)  # Should raise an "pop from empty stack" error
+
+    # Test case 2: Push elements into the stack and then pop
+    s.push(1)
+    s.push(2)
+    s.push(3)
+    print(s.pop())  # Should print 3
+    print(s.peek())  # Should print 2
+    print(s.size())  # Should print 2
+
+    # Test case 3: Check if stack is empty
+    print(s.is_empty())  # Should print False
+
+    # Pop remaining elements
+    print(s.pop())  # Should print 2
+    print(s.pop())  # Should print 1
+    print(s.is_empty())  # Should print True

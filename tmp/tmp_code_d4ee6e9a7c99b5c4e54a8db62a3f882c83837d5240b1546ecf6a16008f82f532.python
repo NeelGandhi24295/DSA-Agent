@@ -1,0 +1,42 @@
+class Queue:
+    def __init__(self):
+        self.queue = []
+
+    def isEmpty(self):
+        return len(self.queue) == 0
+
+    def enqueue(self, item):
+        self.queue.append(item)
+        print(f"Enqueued {item} to queue")
+
+    def dequeue(self):
+        if self.isEmpty():
+            return "Queue is empty"
+        return self.queue.pop(0)
+
+    def front(self):
+        if self.isEmpty():
+            return "Queue is empty"
+        return self.queue[0]
+
+    def size(self):
+        return len(self.queue)
+
+# Test cases
+queue = Queue()
+
+# Test case 1: Enqueue elements into the queue
+queue.enqueue(1)
+queue.enqueue(2)
+queue.enqueue(3)
+
+# Test case 2: Check the front element of the queue
+print("Front element is:", queue.front())
+
+# Test case 3: Dequeue elements from the queue
+print("Dequeued element:", queue.dequeue())
+print("Dequeued element:", queue.dequeue())
+print("Dequeued element:", queue.dequeue())
+
+# Test case 4: Try to dequeue from an empty queue
+print("Dequeued element:", queue.dequeue())

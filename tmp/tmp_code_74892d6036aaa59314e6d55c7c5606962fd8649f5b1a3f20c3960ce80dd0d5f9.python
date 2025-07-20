@@ -1,0 +1,15 @@
+def all_substrings(s):
+    substrings = []
+    length = len(s)
+    for i in range(length):
+        for j in range(i + 1, length + 1):
+            substrings.append(s[i:j])
+    return substrings
+
+# Test cases
+test_cases = ["abc", "abcd", "xyz"]
+
+for i, test in enumerate(test_cases):
+    print(f"Test case {i+1}: Input: {test}")
+    result = all_substrings(test)
+    print(f"Substrings: {result}\n")

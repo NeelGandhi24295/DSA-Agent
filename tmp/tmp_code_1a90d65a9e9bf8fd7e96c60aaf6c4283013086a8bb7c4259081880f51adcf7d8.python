@@ -1,0 +1,35 @@
+def binary_search(arr, target, start, end):
+    while start <= end:
+        mid = start + (end - start) // 2
+        if arr[mid] < target:
+            start = mid + 1
+        else:
+            end = mid - 1
+    return start
+
+def binary_insertion_sort(arr):
+    for i in range(1, len(arr)):
+        current_value = arr[i]
+        # Find the position where the current element should be inserted
+        pos = binary_search(arr, current_value, 0, i - 1)
+        # Shift elements to the right to make space for the current element
+        for j in range(i, pos, -1):
+            arr[j] = arr[j - 1]
+        arr[pos] = current_value
+
+# Test the algorithm
+arr1 = [29, 10, 14, 37, 13]
+arr2 = [1, 2, 3, 4, 5]  # Already sorted
+arr3 = [5, 4, 3, 2, 1]  # Reverse sorted
+
+print("Original array 1:", arr1)
+binary_insertion_sort(arr1)
+print("Sorted array 1:", arr1)
+
+print("Original array 2:", arr2)
+binary_insertion_sort(arr2)
+print("Sorted array 2:", arr2)
+
+print("Original array 3:", arr3)
+binary_insertion_sort(arr3)
+print("Sorted array 3:", arr3)

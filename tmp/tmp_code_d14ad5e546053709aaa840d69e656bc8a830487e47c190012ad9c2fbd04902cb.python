@@ -1,0 +1,49 @@
+class Queue:
+    def __init__(self):
+        self.queue = []
+
+    def enqueue(self, item):
+        self.queue.append(item)
+
+    def dequeue(self):
+        if not self.is_empty():
+            return self.queue.pop(0)
+        return "Queue is empty"
+
+    def front(self):
+        if not self.is_empty():
+            return self.queue[0]
+        return "Queue is empty"
+
+    def is_empty(self):
+        return len(self.queue) == 0
+
+    def size(self):
+        return len(self.queue)
+
+# Test cases
+def test_queue():
+    # Test case 1
+    q1 = Queue()
+    q1.enqueue(1)
+    q1.enqueue(2)
+    q1.enqueue(3)
+    print("Dequeue from q1:", q1.dequeue())  # Should print 1
+    print("Front of q1:", q1.front())      # Should print 2
+    print("Size of q1:", q1.size())        # Should print 2
+
+    # Test case 2
+    q2 = Queue()
+    print("Dequeue from empty q2:", q2.dequeue())  # Should print "Queue is empty"
+    print("Front of empty q2:", q2.front())        # Should print "Queue is empty"
+
+    # Test case 3
+    q3 = Queue()
+    q3.enqueue('apple')
+    q3.enqueue('banana')
+    q3.enqueue('cherry')
+    print("Dequeue from q3:", q3.dequeue())  # Should print 'apple'
+    print("Front of q3:", q3.front())      # Should print 'banana'
+    print("Size of q3:", q3.size())        # Should print 2
+
+test_queue()

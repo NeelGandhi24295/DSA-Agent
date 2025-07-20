@@ -1,0 +1,44 @@
+class Stack:
+    def __init__(self):
+        self.items = []
+
+    def isEmpty(self):
+        return len(self.items) == 0
+
+    def push(self, item):
+        self.items.append(item)
+
+    def pop(self):
+        if not self.isEmpty():
+            return self.items.pop()
+        return None
+
+    def peek(self):
+        if not self.isEmpty():
+            return self.items[-1]
+        return None
+
+    def size(self):
+        return len(self.items)
+
+# Test cases for the Stack implementation
+def test_stack_operations():
+    # Create a stack
+    stack = Stack()
+
+    # Test case 1: Push elements to the stack
+    stack.push(1)
+    stack.push(2)
+    stack.push(3)
+    print("Test case 1: Pushed elements are [1, 2, 3]")
+    print("Current stack items:", stack.items)
+    
+    # Test case 2: Pop the top element
+    print("Test case 2: Popped element:", stack.pop())
+    print("Current stack items after pop:", stack.items)
+
+    # Test case 3: Peek at the top element
+    print("Test case 3: Top element after pop:", stack.peek())
+
+# Run the test cases for the stack
+test_stack_operations()

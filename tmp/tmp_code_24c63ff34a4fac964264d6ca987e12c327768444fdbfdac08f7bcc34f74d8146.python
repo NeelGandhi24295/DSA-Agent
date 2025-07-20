@@ -1,0 +1,48 @@
+class Queue:
+    def __init__(self):
+        self.items = []
+
+    def is_empty(self):
+        return len(self.items) == 0
+
+    def enqueue(self, item):
+        self.items.append(item)
+
+    def dequeue(self):
+        if not self.is_empty():
+            return self.items.pop(0)
+        return "Queue is empty"
+
+    def peek(self):
+        if not self.is_empty():
+            return self.items[0]
+        return "Queue is empty"
+
+    def size(self):
+        return len(self.items)
+
+# Testing the Queue implementation
+queue = Queue()
+
+# Test Case 1: Enqueue and Dequeue a single element
+queue.enqueue(10)
+print("Test Case 1")
+print("Enqueued 10, dequeued:", queue.dequeue())  # Expected: 10
+
+# Test Case 2: Enqueue multiple elements and then dequeue them all
+queue.enqueue(20)
+queue.enqueue(30)
+queue.enqueue(40)
+print("\nTest Case 2")
+print("Enqueued 20, 30, 40")
+print("Dequeued element:", queue.dequeue())  # Expected: 20
+print("Dequeued element:", queue.dequeue())  # Expected: 30
+print("Dequeued element:", queue.dequeue())  # Expected: 40
+
+# Test Case 3: Check peek and is_empty functionality
+queue.enqueue(50)
+print("\nTest Case 3")
+print("Peek element:", queue.peek())  # Expected: 50
+print("Is Queue empty?:", queue.is_empty())  # Expected: False
+queue.dequeue()
+print("Is Queue empty after dequeuing?:", queue.is_empty())  # Expected: True

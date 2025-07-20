@@ -1,0 +1,22 @@
+code = """
+def sort_numbers(numbers):
+    \"\"\"
+    This function sorts a list of integers in ascending order.
+
+    :param numbers: List of integers to sort
+    :return: A new list with the integers sorted in ascending order
+    \"\"\"
+    return sorted(numbers)
+
+# Test cases
+test_case_1 = [5, 2, 9, 1, 5, 6]
+test_case_2 = [3, 0, -1, 8, 2, -3]
+test_case_3 = [100, 82, 70, 58, 95]
+
+# Execute and print results
+print("Sorted Test Case 1:", sort_numbers(test_case_1))
+print("Sorted Test Case 2:", sort_numbers(test_case_2))
+print("Sorted Test Case 3:", sort_numbers(test_case_3))
+"""
+with open("solutions.py", "w") as f:
+    f.write(code)

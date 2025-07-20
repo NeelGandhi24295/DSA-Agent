@@ -1,0 +1,13 @@
+## This is used to create virtual environment
+
+step-1 ---> python -m venv project_AG 
+
+
+# DO Activate the Environment
+
+Step-2 --->venv\Scripts\activate.bat  
+
+# Once you activate the environment than DO
+
+step-3 ---> pip install -r requirements.txt
+

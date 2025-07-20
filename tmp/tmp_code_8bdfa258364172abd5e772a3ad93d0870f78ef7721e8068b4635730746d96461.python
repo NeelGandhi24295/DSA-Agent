@@ -1,0 +1,44 @@
+code = """
+class Stack:
+    def __init__(self):
+        self.items = []
+
+    def push(self, item):
+        self.items.append(item)
+
+    def pop(self):
+        if not self.is_empty():
+            return self.items.pop()
+        return 'Stack is empty'
+
+    def peek(self):
+        if not self.is_empty():
+            return self.items[-1]
+        return 'Stack is empty'
+
+    def is_empty(self):
+        return len(self.items) == 0
+
+    def size(self):
+        return len(self.items)
+
+# Test cases
+if __name__ == '__main__':
+    stack = Stack()
+
+    # Test case 1: Push elements and check size
+    stack.push(10)
+    stack.push(20)
+    stack.push(30)
+    print('Size after pushing 3 elements:', stack.size())  # Output: 3
+
+    # Test case 2: Peek at the top element
+    print('Top element:', stack.peek())  # Output: 30
+
+    # Test case 3: Pop element and then check top and size
+    stack.pop()
+    print('Size after popping 1 element:', stack.size())  # Output: 2
+    print('Top element after pop:', stack.peek())  # Output: 20
+"""
+with open("solutions.py", "w") as f:
+    f.write(code)

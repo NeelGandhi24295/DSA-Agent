@@ -1,0 +1,21 @@
+code = """
+# Function to add two numbers
+def add_numbers(a, b):
+    return a + b
+
+# Test cases
+print('Test Case 1:')
+result1 = add_numbers(3, 5)
+print(f'Adding 3 and 5 gives: {result1}')
+
+print('Test Case 2:')
+result2 = add_numbers(10, 20)
+print(f'Adding 10 and 20 gives: {result2}')
+
+print('Test Case 3:')
+result3 = add_numbers(-2, 8)
+print(f'Adding -2 and 8 gives: {result3}')
+"""
+
+with open("solutions.py", "w") as f:
+    f.write(code)
