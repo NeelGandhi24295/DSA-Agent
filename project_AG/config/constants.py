@@ -3,4 +3,4 @@ TEXT_MENTION_TERMINATION = 'STOP'
 DOCKER_WORK_DIR = 'tmp'
 DOCKER_TIMEOUT=120
 MAX_TURNS=15
-OPENAI_API_KEY = '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'
+OPENAI_API_KEY = 'your_openai_api_key_here'  # Replace with your actual OpenAI API key
